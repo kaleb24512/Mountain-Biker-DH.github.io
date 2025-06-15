@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mountain Biker DH</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500;700&display=swap" rel="stylesheet">    
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="display-4 text-white text-uppercase m-0">Mountain Biker DH</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto py-0">
+                <a href="#home" class="nav-item nav-link active">INICIO</a>
+                <a href="#about" class="nav-item nav-link">CONOCENOS</a>
+                <a href="#service" class="nav-item nav-link">PRODUCTOS</a>
+                <a href="#team" class="nav-item nav-link">MODELOS</a>
+            </div>
+            <a href="index.html" class="navbar-brand bg-success px-0.5 mx-0.5 d-none d-lg-block">
+                <h1 class="display-4 text-white text-uppercase m-0">Mountain Biker DH</h1>
+            </a>
+            <div class="navbar-nav mr-auto py-0">
+                <a href="#faqs" class="nav-item nav-link">PREGUNTAS</a>
+                <a href="#testimonial" class="nav-item nav-link">REFERENCIAS</a>
+                <a href="#contact" class="nav-item nav-link">CONTACTANOS</a>
+                <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#cartModal">
+                    <i class="fa fa-shopping-cart"></i> Carrito
+                    <span class="badge badge-light ml-1" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Tu Carrito de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-cart-items" class="row">
+                        <div class="col-12 text-center" id="modal-empty-cart-message">
+                            <p>Tu carrito está vacío.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-block">
+                    <div class="text-right mb-3">
+                        <h4 class="mb-0">Total: <span id="modal-cart-total">$0.00 MXN</span></h4>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir Comprando</button>
+                            <button type="button" class="btn btn-success" onclick="procesarCompra()">Proceder al Pago</button>
+
+                            <div id="venta-confirmada" class="mt-4 p-3 bg-light border rounded" style="display: none;">
+                                <h5>Compra confirmada ✅</h5>
+                                <div id="resumen-compra"></div>
+                                <p class="text-success mt-2">¡Gracias por tu compra! Te contactaremos pronto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H6z3g/OQjMTHQQKaI" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57B+Y1GRFhG/lE5y0tT92H3z" crossorigin="anonymous"></script>
+
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+    <script src="js/main.js"></script>
+    <script src="ruta/al/archivo/refresh.js"></script> </body>
+</html>
+
+
+    <!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5 pb-5" id="home">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                <video class="position-absolute w-100 h-100" style="object-fit: cover;" autoplay loop muted playsinline>
+                    <source src="video/bici.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Tienda Online</h4>
+                        <h3 class="display-2 font-secondary text-white mb-4">Mountain Biker DH</h3>
+                        <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">Cotizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+            </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid mb-4 mb-lg-0" src="img/kars15.jpeg" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">CONOCENOS</h6>
+                    <h1 class="display-4 mb-3"><span class="text-primary">Mountain Biker DH</span> Quienes somos?</h1>
+                    <p>En nuestra tienda, la pasión por la bicicleta cobra vida. Explora nuestra exclusiva colección de bicicletas de alto rendimiento, diseñadas para cada aventura: desde la adrenalina pura del Downhill (DH) y el Enduro, la versatilidad de la Mountain Bike (MTB) para conquistar senderos, hasta la velocidad y precisión de las bicicletas de Pista.
+
+Cada bicicleta es una obra maestra, construida con los mejores materiales como fibra de carbono y aluminio, equipadas con sistemas de suspensión avanzados, transmisiones de última generación y frenos de disco de alto rendimiento para garantizar un rendimiento superior, seguridad y comodidad en cada pedaleo.
+
+Más allá de las bicicletas, encontrarás una selección cuidadosamente curada de artículos de ciclismo para equiparte por completo. Ya seas un ciclista experimentado o estés dando tus primeros pedales, estamos aquí para brindarte el equipo perfecto que te impulse a vivir nuevas experiencias y superar tus límites.</p>
+                    <a class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button" data-toggle="modal" data-target="#exampleModalLong">PROMOCION!!!!!</a>
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">PROMOCION!!</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+               <video class="video-modal-aligned" autoplay loop muted playsinline>
+            <source src="video/promocion.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid py-5" id="service">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">nuestros</h6>
+                <h1 class="font-secondary display-4">modelos</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                    <div class="product-item mb-2">
+                        <div class="product-img">
+                            <img class="img-fluid" src="img/kars20.jpg" alt="">
+                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                <i class="fa fa-2x fa-plus text-white"></i>
+                            </a>
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h3 class="m-0">Gravell</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="product-item mb-2">
+                        <div class="product-img">
+                            <img class="img-fluid" src="img/kars9.jpg" alt="">
+                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                <i class="fa fa-2x fa-plus text-white"></i>
+                            </a>
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h3 class="m-0">MTB</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="product-item mb-2">
+                        <div class="product-img">
+                            <img class="img-fluid" src="img/kars11.jpg" alt="">
+                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                <i class="fa fa-2x fa-plus text-white"></i>
+                            </a>
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h3 class="m-0">Cross country</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5" id="team">
+    <div class="container py-5">
+        <div class="section-title position-relative text-center">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">TIENDA</h6>
+            <h1 class="font-secondary display-4">BICICLETAS Y ARTICULOS</h1>
+        </div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">DH</h5>
+                            <p class="text-muted font-italic mb-2">BICICLETA DE DOUWHILL</p>
+                            <p>Bicicleta de montaña con cuadro de aluminio o fibra de carbono resistente para cualquier circuito, dos suspensiones delantera y trasera fox , llantas 27,5 o 29 ,llantas maxi , frenos hidraulicos de disco y manubrio rigido para un mejor eje de gravedad PESO 12-13 Kg</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$65,999</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="DH" data-product-name="Bicicleta de douwhill"
+                                            data-product-price="65999 MX" data-product-image="img/7.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/7.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/8.jpg" style="object-fit: cover;">
+                    </div>
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">MTB</h5>
+                            <p class="text-muted font-italic mb-2">BICICLETA DE MONTAÑA</p>
+                            <p>Cuadro rigido de aluminio,ruedas 29,llantas maxi,suspension delantera rockshot,transmision 1x12 shimano,frenos hidraulicos de disco XDS,manubrio rigido y pedales de plataforma PESO 13-14Kg</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$17,900</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="MTB" data-product-name="Bicicleta de montaña"
+                                            data-product-price="17900.00" data-product-image="img/8.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">PST</h5>
+                            <p class="text-muted font-italic mb-2">BICICLETA DE PISTA</p>
+                            <p>Cuadro rigido de fibra de cabono , ruedas 29 , llantas maxi especiales para pista , rines de aluminio . transmision 1x10 shimano,frenos hidraulicos de disco , pedales con clip especiales para zapatos PESO 14-15Kg</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$32,701</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="PISTA" data-product-name="Bicicleta de pista"
+                                            data-product-price="32701.00" data-product-image="img/9.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/9.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/5.jpg" style="object-fit: cover;">
+                    </div>
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">ENDURO</h5>
+                            <p class="text-muted font-italic mb-2">BICICLETA ENDURO BIKING</p>
+                            <p>Cuadro de fibra de carbono o aluminio,ruedas 27.5 o 29,llantas maxi,transmision 1x12 shimano,frenos hidrulicos de disco ,suspension delantera y trasera fox,manubrio con eje central PESO 11-12Kg</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$79,999</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="enduro-biking-001" data-product-name="Bicicleta Enduro Biking"
+                                            data-product-price="79999.00" data-product-image="img/5.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">CASCO DH</h5>
+                            <p class="text-muted font-italic mb-2">CASCO CERRADO</p>
+                            <p>Casco para dh , de diferentes colores , marca fox, TALLAS chica , mediana y grande </p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$1,499</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="DH" data-product-name="CASCO CERRADO"
+                                            data-product-price="1499.00" data-product-image="img/casco1.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/casco1.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/casco2.jpg" style="object-fit: cover;">
+                    </div>
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">CASCO PARA CICLISMO</h5>
+                            <p class="text-muted font-italic mb-2">CASCO CICLISTA</p>
+                            <p>Casco corto , para ciclismo de pista , ruta o mtb , marca nexthu , diferentes colores, TALLAS chico,grande,mediano</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$1,987</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="casco para ciclismo" data-product-name="casco ciclista"
+                                            data-product-price="1987.00" data-product-image="img/casco2.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">GUANTES MTB</h5>
+                            <p class="text-muted font-italic mb-2">GUANTES MTB</p>
+                            <p>Guantes cerrados marca fox , colores rojo,negro y azul , TALLA chico,mediano,grande con agarre a puños sin resbalo</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$890</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="GUANTES MTB" data-product-name="GAUNTES MTB"
+                                            data-product-price="890.00" data-product-image="img/fox.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/fox.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/gafas.jpg" style="object-fit: cover;">
+                    </div>
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">GAFAS PARA CICLISMO</h5>
+                            <p class="text-muted font-italic mb-2">GAFAS PARA CICLISMO</p>
+                            <p>Gafas para ciclismo , polarizadas ,color negro con franjas rojas ,MARCA JULBO</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$570</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="GAFAS PARA CICLISMO" data-product-name="GAFAS PARA CICLISMO"
+                                            data-product-price="570.00" data-product-image="img/gafas.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">FRENOS HIDRAULICOS</h5>
+                            <p class="text-muted font-italic mb-2">FRENOS HIDRAULICOS</p>
+                            <p>Frenos hidrulicos delantero y trasero , con calipers , pastllas de frenado y con liquido , MARCA SHIMANO (Color rojo)</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$785</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="FRENOS HIDRAULICOS" data-product-name="FRENOS HIDRAULICOS"
+                                            data-product-price="785.00" data-product-image="img/frenos.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/frenos.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/gafas2.jpg" style="object-fit: cover;">
+                    </div>
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">GAFAS PARA CICLISMO</h5>
+                            <p class="text-muted font-italic mb-2">GAFAS PARA CICLISMO</p>
+                            <p>Gafas para ciclismo super comodas , color azul polarizadas , MARCA LVLY </p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$430</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="GAFAS PARA CICLISMO" data-product-name="GAFAS PARA CICLISMO"
+                                            data-product-price="$430.00" data-product-image="img/gafas2.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">GOOGLES DH</h5>
+                            <p class="text-muted font-italic mb-2">GOOGLES DH</p>
+                            <p>Googles para DH y raill para mayor proteccion y mejoramiento de vista MARCA 100 FOX SPORT</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$1,200</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="GOOGLES DH" data-product-name="GOOGLES DH"
+                                            data-product-price="12OO.00" data-product-image="img/googles.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/googles.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/herramientas.jpg" style="object-fit: cover;">
+                    </div>
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">HERRAMIENTAS</h5>
+                            <p class="text-muted font-italic mb-2">HERRAMIENTAS</p>
+                            <p>Herrmientas para biciclita con matraca, llaves l ,bomba de aire , parches , corta cadena , apretador de rayos .</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$340</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="HERRAMIENTAS" data-product-name="HERRAMIENTAS"
+                                            data-product-price="340.00" data-product-image="img/herramientas.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">LLANTAS MAXI</h5>
+                            <p class="text-muted font-italic mb-2">LLANTAS MAXI</p>
+                            <p>Llantas maxi cara amarilla , para rodada 27,5 y 29 para mtb y bicicleta de pista , tumble o de aire (venta por unidad)</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$780</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="LLANTAS MAXI" data-product-name="LLANTAS MAXI"
+                                            data-product-price="780.00" data-product-image="img/llantasmaxi.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/llantasmaxi.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+    <div class="col-lg-6 p-0">
+        <div class="row m-0">
+            <div class="col-sm-6 p-0" style="min-height: 300px;">
+                <img class="position-absolute w-100 h-100" src="img/llantasmichelin.jpg" style="object-fit: cover;">
+            </div>
+            <div class="col-sm-6 p-0 text-center">
+                <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                    <h5 class="mb-2">LLANTAS MICHELLIN</h5>
+                    <p class="text-muted font-italic mb-2">LLANTAS MICHELLIN</p>
+                    <p>Llantas michellin cara azul premiun , disponible para bicicleta de montaña rodada 27,5 y 29 , tumble o aire (venta por unidad).</p>
+                    <div class="position-relative mb-2">
+                        <div class="d-flex align-items-center">
+                            <h3 class="font-weight-semi-bold m-0 mr-3">$1,500</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <button class="btn btn-primary add-to-cart-btn"
+                                    data-product-id="LLANTAS-MICHELLIN" data-product-name="LLANTAS MICHELLIN"
+                                    data-product-price="1500.00" data-product-image="img/llantasmichelin.jpg">
+                                    <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">EJE CENTRAL CELLADO</h5>
+                            <p class="text-muted font-italic mb-2">EJE CENTRAL CELLADO</p>
+                            <p>Refaccion de eje central licepro cellado , para bicis de montañña , dh , riil , para transmision 1x10 o 1x12 </p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$650</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="EJE CENTRAL CELLADO" data-product-name="EJE CENTRAL CELLADO"
+                                            data-product-price="650.00" data-product-image="img/pedales.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/pedales.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/rienes1.jpg" style="object-fit: cover;">
+                    </div>
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">RINES MTB</h5>
+                            <p class="text-muted font-italic mb-2">RINES MTB</p>
+                            <p>Rines especialmente para bicicletas de montaña , de fibra de carbono , disponible para rodada 27,5 y 29 unico modelo</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$2,300</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="RINES MTB" data-product-name="RINES MTB"
+                                            data-product-price="2300.00" data-product-image="img/rienes1.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">RINES PARA BICI DE PISTA</h5>
+                            <p class="text-muted font-italic mb-2">RINES PARA BICI DE PISTA</p>
+                            <p>Rines para bicicleta de pista o Gravell para unicamente rodada 29 marca hdlxc  de fibra de carbono.</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$2,799</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="RINES PARA BICI DE PISTA" data-product-name="RINES PARA BICI DE PISTA"
+                                            data-product-price="2799.00" data-product-image="img/rines2.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/rines2.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/rodilleras.jpg" style="object-fit: cover;">
+                    </div>
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">RODILLERAS  DE PROTECCION</h5>
+                            <p class="text-muted font-italic mb-2">RODILLERAS  DE PROTECCION</p>
+                            <p>Rodilleras de proteccion para DH marca fox de un buen material rsistentes y muy flexibles.</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$790</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="RODILLERAS  DE PROTECCION" data-product-name="RODILLERAS  DE PROTECCION"
+                                            data-product-price="790" data-product-image="img/rodilleras.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">RODILLO DE ENTRENAMIENTO</h5>
+                            <p class="text-muted font-italic mb-2">RODILLO DE ENTRENAMIENTO</p>
+                            <p>Rodillo de entrenamiento adaptable para cualquier bici , empquetado y con instrucciones para su mejor uso y desempeño</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$1,899</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="RODILLO DE ENTRENAMIENTO" data-product-name="RODILLO DE ENTRENAMIENTO"
+                                            data-product-price="1899.00" data-product-image="img/rodillo.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/rodillo.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
+            <div class="col-lg-6 p-0">
+                <div class="row m-0">
+                    <div class="col-sm-6 p-0" style="min-height: 300px;">
+                        <img class="position-absolute w-100 h-100" src="img/traje.jpg" style="object-fit: cover;">
+                    </div>
+                    <div class="col-sm-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                            <h5 class="mb-2">LICRA DE CICLISMO</h5>
+                            <p class="text-muted font-italic mb-2">LICRA DE CICLISMO</p>
+                            <p>Licra de ciclismo marca SRAM con colchon en la parte trasera ventilacion y comodidad para tus rutas largas o cortas (COLOR NEGRO)</p>
+                            <div class="position-relative mb-2">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="font-weight-semi-bold m-0 mr-3">$599</h3>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button class="btn btn-primary add-to-cart-btn"
+                                            data-product-id="LICRA DE CICLISMO" data-product-name="LICRA DE CICLISMO"
+                                            data-product-price="599.00" data-product-image="img/traje.jpg">
+                                            <i class="fa fa-shopping-cart mr-1"></i> Comprar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+    <!-- Team End -->
+
+
+    <!-- FAQs Start -->
+    <div class="container-fluid py-5" id="faqs">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">NOSOTROS</h6>
+                <h1 class="display-4">TE OFRECEMOS</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 border-right border-primary">
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                        <h3 class="mb-4">TIENDA</h3>
+                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Productos de alta gama</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Las mejores bicicletas </h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Diversidad de Productos</h5>
+                        <h5 class="mb-0"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Diferentes marcas</h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center text-md-left ml-md-3">
+                        <h3 class="mb-4">ATENCION</h3>
+                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>atencion a clientes</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>valores de la empresa</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Envios a todo mexico</h5>
+                        <h5 class="mb-0"><i class="fa fa-check text-success mr-2"></i>Garantias extendibles</h5>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center pt-3">
+                    <a class="btn btn-primary font-weight-bold py-3 px-5 mt-4 btn-scroll" href="#contact">contactanos ahora!!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQs End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5" id="testimonial">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">referencias</h6>
+                <h1 class="display-4">clientes del dia </h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <img class="img-fluid mx-auto mb-3" src="img/ciclista1.jpg" style="width: 100px;">
+                            <p style="font-size: 22px;">"¡Mi experiencia en Mountain Biker DH fue fantástica! Desde que entré me sentí bienvenido. El equipo fue súper atento y me ayudó a encontrar la bicicleta perfecta para mis rutas diarias. ¡Definitivamente mi lugar favorito para todo lo relacionado con bicis!"</p>
+                            <h4>Juan Pérez</h4>
+                            <span>ciclista urbano</span>
+                        </div>
+                        <div class="text-center">
+                            <img class="img-fluid mx-auto mb-3" src="img/ciclista2.jpg" style="width: 100px;">
+                            <p style="font-size: 22px;">"Compré mi SPECIALIZED en Mountain Biker DH hace seis meses y estoy encantado. La calidad es excepcional y el precio fue muy competitivo. Es una inversión que ha valido cada centavo para mis paseos de fin de semana."</p>
+                            <h4>Luis Hernández</h4>
+                            <span>ciclista de ruta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">CONTACTANOS</h6>
+                <h1 class="font-secondary display-4">FORMULARIO</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="col-sm-6 control-group">
+                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3 bg-white" id="name" placeholder="NOMBRE" required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="col-sm-6 control-group">
+                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3 bg-white" id="email" placeholder="CORREO ELECTRONICO" required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control bg-secondary border-0 py-4 px-3 bg-white" id="subject" placeholder="NUMERO DE TELEFONO " required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control bg-secondary border-0 py-2 px-3 bg-white" rows="6" id="message" placeholder="MENSAJE" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-primary font-weight-bold py-3 px-5 " type="submit" id="sendMessageButton">ENVIAR MENSAJE</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-12 mb-4 px-4">
+                <div class="row mb-5 p-4" style="background: rgba(256, 256, 256, .05);">
+                    <div class="col-md-4">
+                        <div class="text-md-center">
+                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">UBICACION</h5>
+                            <p class="mb-4 m-md-0">52000 LERMA DE VILLADAD ,MEXICO</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-md-center">
+                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">CORREO ELECTRONICO</h5>
+                            <p class="mb-4 m-md-0">MountainBikerDH@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-md-center">
+                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">TELEFONO</h5>
+                            <p class="m-0">+52 7225356441</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <p>¿Eres un apasionado de las dos ruedas? ¡Conéctate con nosotros!
+Cuerpo: En Mountain Biker DH, compartimos tu amor por el ciclismo. Síguenos en nuestras páginas para:
+
+Inspiración para tus próximas aventuras
+Contenido exclusivo sobre el mundo de las bicis
+Un espacio para conectar con otros ciclistas
+¡Y mucho más!</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">NUESTROS PRODUCTOS</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>Bicicletas</a>
+                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>cascos</a>
+                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>llantas</a>
+                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>refacciones de bicicletas</a>
+                            <a class="text-white btn-scroll" href="#service"><i class="fa fa-angle-right mr-2"></i>equipo de proteccion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 mb-5">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">UNETE A LA FAMILIA</h5>
+                <p>"¡Bienvenido a la familia [Nombre de tu Tienda de Bicicletas]! Somos más que una tienda; somos un punto de encuentro para amantes del ciclismo. Aquí, cada cliente es un compañero de ruta, y cada conversación es una oportunidad para compartir conocimientos y experiencias. Únete a nuestra comunidad, descubre el equipo perfecto y prepárate para recorrer el mundo, un pedaleo a la vez. ¡Juntos, hacemos que la pasión por la bici no tenga límites!"
+
+</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="CORREO">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-4">ENVIAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white text-center border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .05) !important;">
+        <p class="m-0 text-white">&copy; <a href="#">Domain Name</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Solar Energy System</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid mb-4" src="img/kaleb2.jpg" alt="">
+                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
+                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
+                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
+                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
+                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
+                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Tu Carrito de Compras</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-cart-items" class="row"></div>
+        <div class="col-12 text-center" id="modal-empty-cart-message">
+          <p>Tu carrito está vacío.</p>
+        </div>
+      </div>
+      <div class="modal-footer d-block">
+        <div class="text-right mb-3">
+          <h4 class="mb-0">Total: <span id="modal-cart-total">$0.00 MX</span></h4>
+        </div>
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir Comprando</button>
+          <button type="button" class="btn btn-primary">Proceder al Pago</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <script src="js/main.js"></script> 
+
+  <script>
+    let carrito = [];
+
+    // Actualiza el contador de productos
+    function actualizarContador() {
+        document.getElementById('cart-count').textContent = carrito.length;
+    }
+
+    // Renderiza productos en el modal del carrito
+    function renderizarCarrito() {
+        const contenedor = document.getElementById('modal-cart-items');
+        const vacio = document.getElementById('modal-empty-cart-message');
+        contenedor.innerHTML = '';
+        let total = 0;
+
+        if (carrito.length === 0) {
+            vacio.style.display = 'block';
+        } else {
+            vacio.style.display = 'none';
+        }
+
+        carrito.forEach((producto, index) => {
+            // Asegúrate de que el precio sea un número antes de sumarlo
+            // Si tu 'producto.precio' ya incluye un símbolo de moneda, debes limpiarlo.
+            // La expresión regular `/[^0-9.]/g` es correcta para esto si el precio viene como "$4999.00"
+            const precioNumerico = parseFloat(producto.precio.replace(/[^0-9.]/g, ''));
+            total += precioNumerico;
+
+            const div = document.createElement('div');
+            div.className = 'col-12 d-flex justify-content-between align-items-center border-bottom py-2';
+            div.innerHTML = `
+                <div>
+                    <strong>${producto.nombre}</strong><br>
+                    <small>${producto.precio}</small>
+                </div>
+                <button class="btn btn-sm btn-danger" onclick="eliminarDelCarrito(${index})">Eliminar</button>
+            `;
+            contenedor.appendChild(div);
+        });
+
+        // --- ¡AQUÍ ESTÁ EL CAMBIO CLAVE PARA EL TOTAL DEL CARRITO! ---
+        // Opción 1: Formato de Moneda Automático ($207,995.00)
+        document.getElementById('modal-cart-total').textContent = new Intl.NumberFormat('es-MX', {
+            style: 'currency',
+            currency: 'MXN', // MXN para Peso Mexicano
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(total);
+
+        // O, si prefieres "$207,995.00 MX" explícitamente:
+        /*
+        document.getElementById('modal-cart-total').textContent = `$${total.toLocaleString('es-MX', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        })} MX`;
+        */
+        // Si tu precio original ya tiene un símbolo de dólar, y solo quieres cambiar el "USD" final:
+        // Asegúrate que tu `producto.precio` en `add-to-cart-btn` no tiene "USD" al final,
+        // o que tu `replace` lo limpia adecuadamente.
+
+        actualizarContador();
+    }
+
+    // Agrega producto al carrito
+    document.querySelectorAll('.add-to-cart-btn').forEach(boton => {
+        boton.addEventListener('click', () => {
+            const producto = {
+                id: boton.dataset.productId,
+                nombre: boton.dataset.productName,
+                precio: boton.dataset.productPrice, // Asegúrate que este precio es numérico o una cadena limpia
+                imagen: boton.dataset.productImage
+            };
+            carrito.push(producto);
+            renderizarCarrito();
+        });
+    });
+
+    // Elimina producto por índice
+    function eliminarDelCarrito(index) {
+        carrito.splice(index, 1);
+        renderizarCarrito();
+    }
+
+    // Inicializa al abrir el modal
+    $('#cartModal').on('show.bs.modal', function () {
+        renderizarCarrito();
+    });
+
+    //Funcion para simular una compra y mostrar resumen
+    function procesarCompra() {
+        if (carrito.length === 0) {
+            alert("Tu carrito está vacío.");
+            return;
+        }
+
+        let resumenHTML = "<ul>";
+        let total = 0;
+
+        carrito.forEach(producto => {
+            const precioNumerico = parseFloat(producto.precio.replace(/[^0-9.]/g, ''));
+            resumenHTML += `<li>${producto.nombre} - ${new Intl.NumberFormat('es-MX', {
+                style: 'currency',
+                currency: 'MXN'
+            }).format(precioNumerico)}</li>`; // Formatea cada precio individualmente
+            total += precioNumerico;
+        });
+
+        resumenHTML += "</ul>";
+        resumenHTML += `<p><strong>Total:</strong> ${new Intl.NumberFormat('es-MX', {
+            style: 'currency',
+            currency: 'MXN'
+        }).format(total)}</p>`;
+
+        // Mostrar resumen en la misma página
+        document.getElementById('resumen-compra').innerHTML = resumenHTML;
+        document.getElementById('venta-confirmada').style.display = 'block';
+
+        // Vaciar carrito
+        carrito = [];
+        renderizarCarrito();
+    }
+</script>
+    </body>
+</html>
